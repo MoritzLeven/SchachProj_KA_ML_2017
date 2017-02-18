@@ -5,6 +5,9 @@ import java.awt.*;
 
 public class ChessBoard {
 
+    char[] xLetters = {'A','B','C','D','E','F','G','H'};
+    int[] yNumbers = {1,2,3,4,5,6,7,8};
+
     JFrame frame;
     JPanel Field[][] = new JPanel[8][8];
 
@@ -13,21 +16,23 @@ public class ChessBoard {
         frame.setSize(500, 500);
         frame.setLayout(new GridLayout(8, 8));
 
-        for (int i = 0; i < 8; i++) {
-            for (int j = 0; j < 8; j++) {
-                Field[i][j] = new JPanel();
 
-                if ((i + j) % 2 == 0) {
-                    Field[i][j].setBackground(new Color(75,37,5));
+        for (int x = 0; x < 8; x++) {
+            for (int y = 0; y < 8; y++) {
+                Field[x][y] = new JPanel();
+
+                if ((x + y) % 2 == 0) {
+                    Field[x][y].setBackground(new Color(255, 208, 122));
                 } else {
-                    Field[i][j].setBackground(new Color(255, 208, 122));
+                    Field[x][y].setBackground(new Color(75,37,5));
                 }
-                frame.add(Field[i][j]);
+                frame.add(Field[x][y]);
 
             }
         }
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+
     }
 
     public static void main(String[] args) {
