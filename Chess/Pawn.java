@@ -17,7 +17,7 @@ public class Pawn extends Piece {
 
 
 
-    public ArrayList<Integer> possibleMoves(CField f) {
+    public void possibleMoves(CField f) {
         ArrayList<Integer>re=new ArrayList<Integer>();
         if(white){
             //simple forward movement
@@ -72,7 +72,7 @@ public class Pawn extends Piece {
                 }
             }
         }
-        return re;
+        //return re;
     }
 
     @Override

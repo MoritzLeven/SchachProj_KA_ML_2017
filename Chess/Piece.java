@@ -2,7 +2,6 @@ package Chess;
 
 import javax.imageio.ImageIO;
 import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -36,7 +35,7 @@ public abstract class Piece {
     }
 
     public void update(CField f){
-        possibleMoves=possibleMoves(f);
+        //possibleMoves=possibleMoves(f);
     }
 
     public void setType(int type){
@@ -53,7 +52,7 @@ public abstract class Piece {
     }
 
     //This method calculates all moves possible
-    public abstract ArrayList<Integer> possibleMoves(CField f);
+    public abstract void possibleMoves(CField f);
 
     //This method calculates all allied pieces shielded by this piece
     //For each reachable field occupied by any piece a Piece Of Observation (poo) will be created to compare colour and adding

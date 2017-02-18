@@ -1,5 +1,8 @@
 package GUI;
 
+import Chess.Pawn;
+import Chess.Piece;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -22,9 +25,10 @@ public class ChessBoard {
                 Field[x][y] = new JPanel();
 
                 if ((x + y) % 2 == 0) {
-                    Field[x][y].setBackground(new Color(255, 208, 122));
+                    Field[x][y].setBackground(new Color(255, 225, 163));
                 } else {
                     Field[x][y].setBackground(new Color(75,37,5));
+
                 }
                 frame.add(Field[x][y]);
 
@@ -35,7 +39,28 @@ public class ChessBoard {
 
     }
 
+    public void SetPiecePos(Piece character, int pos){
+        int y=pos/8;
+        int x=pos-y*8;
+
+        Field[x][y].getGraphics().drawImage(character.getImage(),1,1,null);
+    }
+
     public static void main(String[] args) {
         new ChessBoard();
+        ChessBoard obj = new ChessBoard();
+        obj.run();
+    }
+
+    public void run(){
+        Pawn test = new Pawn(true,36,1,1);
+        SetPiecePos(test,36);
+    }
+
+
+
+
+    public void reset(){
+
     }
 }
