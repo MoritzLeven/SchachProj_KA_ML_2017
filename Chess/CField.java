@@ -2,7 +2,7 @@ package Chess;
 
 /**
  * Created by Moritz Leven on 04.02.2017.
- * Edited by HendrikRe on 18.02.2017. :)
+ * Edited by HendrikRe on 18.02.2017.
  */
 public class CField {
 
