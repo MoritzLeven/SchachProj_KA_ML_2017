@@ -7,7 +7,7 @@ and choosing the best one by min-maxing.
 For evaluating a combination of two techniques is use:
     1. For each piece it is calculated which pieces of the own are shielded and which pieces of the enemy are attacked.
        Those values are added together where the values of the enemy pieces are multiplied by -1.
-    2. It is calculated which pieces are missing in comparison with the momantaneous state.
+    2. It is calculated which pieces are missing in comparison with the monantaneous state.
        The sum of those values is calculated where the own losses are multiplied with -1.
 
 B) Representation of the field
@@ -27,4 +27,4 @@ The white pieces are starting at the bottom (positions 48-63) and the black at t
 
 In case the human player picks black the matrix is turned around for the drawing, so the pieces of the human player are always
 at the bottom.
-That means also that in case the local multiplayer is used the "board" is turned after every move.
+That means also that in case the local multiplayer is used the "board" is turned after every move..
