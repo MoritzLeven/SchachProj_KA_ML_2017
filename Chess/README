@@ -7,7 +7,7 @@ and choosing the best one by min-maxing.
 For evaluating a combination of two techniques is use:
     1. For each piece it is calculated which pieces of the own are shielded and which pieces of the enemy are attacked.
        Those values are added together where the values of the enemy pieces are multiplied by -1.
-    2. It is calculated which pieces are missing in comparison with the momantaneous state.
+    2. It is calculated which pieces are missing in comparison with the monantaneous state.
        The sum of those values is calculated where the own losses are multiplied with -1.
 
 B) Representation of the field
