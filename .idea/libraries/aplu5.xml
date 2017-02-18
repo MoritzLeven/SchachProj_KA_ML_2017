@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="aplu5">
     <CLASSES>
-      <root url="jar://C:/Ablage/Aplu/aplu5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../Aplu/aplu5.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
