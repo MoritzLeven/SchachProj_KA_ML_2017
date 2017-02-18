@@ -20,9 +20,10 @@ public class ChessBoard {
                 if ((i + j) % 2 == 0) {
                     Field[i][j].setBackground(new Color(75,37,5));
                 } else {
-                    Field[i][j].setBackground(new Color(244,169,0));
+                    Field[i][j].setBackground(new Color(255, 208, 122));
                 }
                 frame.add(Field[i][j]);
+
             }
         }
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
