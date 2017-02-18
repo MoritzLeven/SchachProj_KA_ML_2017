@@ -1,0 +1,36 @@
+#BlueJ class context
+comment0.params=X\ s\ c
+comment0.target=Str(java.lang.String,\ int,\ boolean)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ Str\r\n
+comment1.params=s
+comment1.target=void\ aus(int)
+comment10.params=bytes
+comment10.target=java.lang.String\ arrayToString(byte[])
+comment11.params=bytes
+comment11.target=java.lang.String\ arrayToString(int[])
+comment12.params=be
+comment12.target=java.lang.String[]\ wish(java.lang.String[])
+comment12.text=\ public\ static\ int[]\ toIntArray(ArrayList\ a){\r\n\ \ \ \ \ \ \ \ \ int[]re\=new\ int[a.toArray().length];\r\n\ \ \ \ \ \ \ \ \ for(int\ i\=0;i<re.length;i++){\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ re[i]\=(int)(a.toArray()[i]);\r\n\ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ return\ re;\r\n}
+comment13.params=a
+comment13.target=void\ removeAll(java.util.ArrayList)
+comment14.params=a\ b
+comment14.target=void\ uber(java.util.ArrayList,\ java.util.ArrayList)
+comment15.params=args
+comment15.target=void\ main(java.lang.String[])
+comment2.params=X
+comment2.target=void\ change(java.lang.String)
+comment3.params=X\ s
+comment3.target=void\ str(java.lang.String,\ int)
+comment4.params=
+comment4.target=void\ clear()
+comment5.params=s
+comment5.target=int\ langw(java.lang.String)
+comment6.params=text
+comment6.target=java.util.ArrayList\ satzerk(java.lang.String)
+comment7.params=n
+comment7.target=java.lang.String\ castInt(int)
+comment8.params=old\ space
+comment8.target=java.lang.String\ one(java.lang.String[],\ boolean)
+comment9.params=a
+comment9.target=java.lang.String[]\ toStringArray(java.util.ArrayList)
+numComments=16

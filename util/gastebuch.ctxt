@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.params=
+comment0.target=gastebuch()
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ gastebuch\r\n
+comment1.params=name\ komment
+comment1.target=void\ hinz(java.lang.String,\ java.lang.String)
+comment2.params=
+comment2.target=void\ ausg()
+numComments=3

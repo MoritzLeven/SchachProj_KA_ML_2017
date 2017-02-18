@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=radius
+comment0.target=Frame(int)
+comment1.params=
+comment1.target=void\ makeStrat()
+comment2.params=
+comment2.target=void\ redraw()
+comment3.params=g
+comment3.target=void\ draw(java.awt.Graphics)
+comment4.params=g
+comment4.target=void\ clear(java.awt.Graphics)
+numComments=5

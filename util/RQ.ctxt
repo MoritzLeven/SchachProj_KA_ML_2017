@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.params=x\ y\ width\ height
+comment0.target=RQ(int,\ int,\ int,\ int)
+comment0.text=\r\n\ Constructor\ for\ objects\ of\ class\ RQ\r\n
+comment1.params=clear
+comment1.target=void\ drawPoints(boolean)
+numComments=2

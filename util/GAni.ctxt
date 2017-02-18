@@ -1,0 +1,5 @@
+#BlueJ class context
+comment0.params=beforeDoublePoint\ Long\ begin\ boost
+comment0.target=void\ mWait(java.lang.String,\ int,\ int,\ int)
+comment0.text=\r\n\ A\ Method\ wich\ shows\ -\\|/-\r\n\ \r\n\ @param\ \ y\ \ \ a\ sample\ parameter\ for\ a\ method\r\n\ @return\ \ \ \ \ the\ sum\ of\ x\ and\ y\ \r\n
+numComments=1

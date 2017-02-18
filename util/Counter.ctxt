@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.params=B
+comment0.target=void\ count(int)
+comment1.params=M
+comment1.target=void\ multi(int)
+comment2.params=d
+comment2.target=void\ div(int)
+comment3.params=Bz
+comment3.target=Counter(java.lang.String)
+comment4.params=
+comment4.target=void\ bzr()
+numComments=5
