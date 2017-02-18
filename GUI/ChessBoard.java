@@ -18,9 +18,9 @@ public class ChessBoard {
                 Field[i][j] = new JPanel();
 
                 if ((i + j) % 2 == 0) {
-                    Field[i][j].setBackground(Color.black);
+                    Field[i][j].setBackground(new Color(75,37,5));
                 } else {
-                    Field[i][j].setBackground(Color.white);
+                    Field[i][j].setBackground(new Color(244,169,0));
                 }
                 frame.add(Field[i][j]);
             }
