@@ -48,6 +48,10 @@ public abstract class Piece {
         }
     }
 
+    public Image getImage(){
+        return image;
+    }
+
     //This method calculates all moves possible
     public abstract ArrayList<Integer> possibleMoves(CField f);
 
