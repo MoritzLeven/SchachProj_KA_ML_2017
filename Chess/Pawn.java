@@ -12,7 +12,7 @@ public class Pawn extends Piece {
 
     public Pawn(boolean white, int pos, int index, int indexIT) {
         super(white, pos, index, indexIT);
-        type=0;
+        setType(0);
     }
 
 

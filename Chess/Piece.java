@@ -1,5 +1,9 @@
 package Chess;
 
+import javax.imageio.ImageIO;
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.ArrayList;
 
 /**
@@ -11,6 +15,8 @@ public abstract class Piece {
     int pos;    //(#letter-1)+(number-1)*8
     int indexIT;//a var to differentiate between pieces of the same type
     int index;  //the index of the piece in the formation
+
+    Image image;    //the corresponding image
 
     ArrayList<Integer>possibleMoves; //A list of all currently possible moves updated after every move;
 
@@ -26,10 +32,20 @@ public abstract class Piece {
         this.indexIT=indexIT;
 
         possibleMoves=new ArrayList<Integer>();
+        image=null;
     }
 
     public void update(CField f){
         possibleMoves=possibleMoves(f);
+    }
+
+    public void setType(int type){
+        this.type=type;
+        try {
+            image= ImageIO.read(getClass().getClassLoader().getResourceAsStream("gfx/chess_piece_type_"+type+"_colourwhite="+white+".png"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     //This method calculates all moves possible
