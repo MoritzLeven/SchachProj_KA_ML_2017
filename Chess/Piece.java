@@ -52,7 +52,7 @@ public abstract class Piece {
     }
 
     //This method calculates all moves possible
-    public abstract void possibleMoves(CField f);
+    public abstract ArrayList<Integer> possibleMoves(CField f);
 
     //This method calculates all allied pieces shielded by this piece
     //For each reachable field occupied by any piece a Piece Of Observation (poo) will be created to compare colour and adding
