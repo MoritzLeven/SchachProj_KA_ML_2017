@@ -5,8 +5,17 @@ import Chess.Piece;
 
 import javax.swing.*;
 import java.awt.*;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.Set;
+
+import static javafx.scene.input.KeyCode.K;
+import static javafx.scene.input.KeyCode.V;
 
 public class ChessBoard {
+
+    final Map<Piece,Number> log = new LinkedHashMap<Piece,Number>();
 
     char[] xLetters = {'A','B','C','D','E','F','G','H'};
     int[] yNumbers = {1,2,3,4,5,6,7,8};
@@ -44,6 +53,12 @@ public class ChessBoard {
         int x=pos-y*8;
 
         Field[x][y].getGraphics().drawImage(character.getImage(),1,1,null);
+
+        log.put(character,pos);
+    }
+
+    public void movePos(Piece character, int newPos){
+
     }
 
     public static void main(String[] args) {
@@ -54,9 +69,32 @@ public class ChessBoard {
 
     public void run(){
         Pawn test = new Pawn(true,36,1,1);
-        SetPiecePos(test,36);
     }
 
+
+    public void changePos(Piece character, int newpos){
+        int y=newpos/8;
+        int x=newpos-y*8;
+        SetPiecePos(character, newpos);
+        /**
+         * Hier muss noch das Bild gelöscht werden.
+         * Hab heute morgen keinen Bock mehr gehabt mich damit zu beschäftigen.
+         */
+        Field[x][y].getGraphics().drawImage(character.getImage(),1,1,null);
+    }
+
+
+    public int getLastPos(Piece charakter){
+        final Set<Map.Entry<Piece, Number>> mapValues = log.entrySet();
+        final int maplength = mapValues.size();
+        final Map.Entry<Piece,Number>[] test = new Map.Entry[maplength];
+        mapValues.toArray(test);
+
+
+        int lastpos =(int)test[maplength-1].getValue().intValue();
+
+        return lastpos;
+    }
 
 
 
