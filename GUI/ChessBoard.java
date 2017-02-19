@@ -23,6 +23,9 @@ public class ChessBoard {
     JFrame frame;
     JPanel Field[][] = new JPanel[8][8];
 
+    Color white=new Color(255, 225, 163);
+    Color black=new Color(75,37,5);
+
     public ChessBoard() {
         frame = new JFrame("Schachbrett");
         frame.setSize(500, 500);
@@ -34,9 +37,9 @@ public class ChessBoard {
                 Field[x][y] = new JPanel();
 
                 if ((x + y) % 2 == 0) {
-                    Field[x][y].setBackground(new Color(255, 225, 163));
+                    Field[x][y].setBackground(white);
                 } else {
-                    Field[x][y].setBackground(new Color(75,37,5));
+                    Field[x][y].setBackground(black);
 
                 }
                 frame.add(Field[x][y]);

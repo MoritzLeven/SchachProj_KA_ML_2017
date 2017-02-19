@@ -17,9 +17,10 @@ public class Bishop extends Piece {
     }
 
     @Override
-    public void possibleMoves(CField f) {
+    public ArrayList<Integer> possibleMoves(CField f) {
         //finding the maxpos for all corners
         //int
+        return null;
     }
 
     @Override
