@@ -37,6 +37,11 @@ public class Rechner
         return (int)(Math.random() * x + 1);
     }
 
+    public static int flat(int a){
+        if (a<0)return 0;
+        return a;
+    }
+
     public static String jahr(long t,int timezone,boolean dSTEnabled){
         long whole_t=t;
         long daysSince1970=whole_t/86400000;
@@ -357,6 +362,7 @@ public class Rechner
     }
 
     public static void main(String[] args){
+        System.out.println(36/8*8);
 
         System.out.println(jahr(System.currentTimeMillis(),1,true));
         //functionBuilder();

@@ -4,7 +4,11 @@ package Chess;
  * Created by Moritz Leven on 19.02.2017.
  */
 import javax.swing.*;
+import javax.swing.event.MouseInputListener;
 import java.awt.*;
+import java.awt.event.MouseEvent;
+import java.awt.event.MouseWheelEvent;
+import java.awt.event.MouseWheelListener;
 
 public class ChessBoard {
 
@@ -64,6 +68,49 @@ public class ChessBoard {
             int y=pos/8;
             int x=pos-y*8;
             Field[x][y].getGraphics().drawImage(m.pieces.get(i).getImage(),0,0,null);
+        }
+    }
+
+    private class MouseHandler implements MouseInputListener,MouseWheelListener {
+
+        @Override
+        public void mouseClicked(MouseEvent e) {
+            
+        }
+
+        @Override
+        public void mousePressed(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseReleased(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseEntered(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseExited(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseDragged(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseMoved(MouseEvent e) {
+
+        }
+
+        @Override
+        public void mouseWheelMoved(MouseWheelEvent e) {
+
         }
     }
 }
