@@ -63,7 +63,7 @@ public class ChessBoard {
             int pos=m.pieces.get(i).pos;
             int y=pos/8;
             int x=pos-y*8;
-            Field[x][y].getGraphics().drawImage(m.pieces.get(i).getImage(),0,0,null);
+            Field[x][y].getGraphics().drawImage(m.pieces.get(i).getImage(),1,1,null);
         }
     }
 }
