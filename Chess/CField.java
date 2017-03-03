@@ -11,6 +11,8 @@ public class CField {
     Piece[]whites;      //The white pieces
     Piece[]blacks;      //The balck pieces
 
+    King wking,bking;
+
     boolean[]nowhi;     //Indicates which white pieces are not anymore on the field
     boolean[]nobla;     //Indicates which black pieces are not anymore on the field
 
@@ -24,7 +26,8 @@ public class CField {
         field=new Piece[64];
 
         for (int i = 0; i < 8; i++) {
-
+            whites[i]=new Pawn(true,48+i,i,i);
+            blacks[i]=new Pawn(false,8+i,i,i);
         }
     }
 
@@ -54,6 +57,11 @@ public class CField {
     //Returns true, if the given pos is occupied
     public boolean occupied(int pos){
         return field[pos]!=null;
+    }
+
+    public King getKing(boolean white){
+        if(white)return wking;
+        else return bking;
     }
 
 }

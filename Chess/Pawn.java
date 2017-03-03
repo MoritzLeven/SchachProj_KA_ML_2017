@@ -150,6 +150,7 @@ public class Pawn extends Piece {
                 }
             }
         }
+        attKing=re.contains(f.getKing(!white));
         return re;
     }
 }

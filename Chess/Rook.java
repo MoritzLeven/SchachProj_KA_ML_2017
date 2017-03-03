@@ -145,6 +145,7 @@ public class Rook extends Piece {
                 break;
             }
         }
+        attKing=re.contains(f.getKing(!white));
         return re;
     }
 }

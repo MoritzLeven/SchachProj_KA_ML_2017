@@ -155,6 +155,7 @@ public class Bishop extends Piece {
                 break;
             }
         }
+        attKing=re.contains(f.getKing(!white));
         return re;
     }
 

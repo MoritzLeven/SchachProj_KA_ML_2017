@@ -17,11 +17,15 @@ public abstract class Piece {
 
     Image image;    //the corresponding image
 
-    ArrayList<Integer>possibleMoves; //A list of all currently possible moves updated after every move;
+    ArrayList<Integer>  possibleMoves; //A list of all currently possible moves updated after every move
+    ArrayList<Piece>        shielding; //A list of all allied pieces currently shielded by this piece
+    ArrayList<Piece>        attacking; //A list of all enemy  pieces currently attacked by this piece
 
     //Values of shielding/attacking a specific type ([0]=pawn;[1]=rook;[2]=knight;[3]=bishop;[4]=queen;[5]=king)
     public static final int[] VALUESOFSH={3,2,2,2,1,0};
     public static final int[] VALUESOFAT={0,2,2,2,1,5};
+
+    boolean attKing=false; //detects, if the enemy king is attacked
 
     public Piece(boolean white,int pos,int index,int indexIT){
         this.white=white;
@@ -35,7 +39,9 @@ public abstract class Piece {
     }
 
     public void update(CField f){
-        //possibleMoves=possibleMoves(f);
+        possibleMoves=possibleMoves(f);
+        shielding=shielding(f);
+        attacking=attacking(f);
     }
 
     public void setType(int type){
@@ -64,15 +70,12 @@ public abstract class Piece {
 
     //This method calculates the value of the piece's current position
     public int valOfPos(CField f){
-        ArrayList<Piece>sh=shielding(f);
-        ArrayList<Piece>at=attacking(f);
-
         int val=0;
-        for(int i=0;i<sh.size();i++){
-            val+=VALUESOFSH[sh.get(i).type];
+        for(int i=0;i<shielding.size();i++){
+            val+=VALUESOFSH[shielding.get(i).type];
         }
-        for(int i=0;i<at.size();i++){
-            val+=VALUESOFAT[at.get(i).type];
+        for(int i=0;i<attacking.size();i++){
+            val+=VALUESOFAT[attacking.get(i).type];
         }
 
         return val;

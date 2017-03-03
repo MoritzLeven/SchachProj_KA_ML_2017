@@ -346,6 +346,7 @@ public class Queen extends Piece {
         ArrayList<Piece>re=new ArrayList<Piece>();
         re.addAll(rook_attacking(f));
         re.addAll(bishop_attacking(f));
+        attKing=re.contains(f.getKing(!white));
         return re;
     }
 }
